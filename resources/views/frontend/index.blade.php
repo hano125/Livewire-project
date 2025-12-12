@@ -1,4 +1,7 @@
 @extends('frontend.master')
+@section('header-content')
+    @include('frontend.partials.header')
+@endsection
 @section('content')
     <!-- Feature Start -->
     <div class="container-xxl py-5">

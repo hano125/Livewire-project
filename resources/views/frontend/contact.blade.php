@@ -1,4 +1,7 @@
 @extends('frontend.master')
+@section('header-content')
+    @include('frontend.partials.sub-header', ['page_name' => 'Contact Us'])
+@endsection
 @section('content')
     <!-- Contact Start -->
     <div class="container-xxl py-5">

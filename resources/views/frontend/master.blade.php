@@ -20,7 +20,7 @@
             @include('frontend.partials.navbar')
 
 
-            @include('frontend.partials.header')
+            @yield('header-content')
 
         </div>
         <!-- Navbar & Hero End -->
@@ -33,8 +33,7 @@
 
 
         <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i
-                class="bi bi-arrow-up"></i></a>
+        <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
 
     @include('frontend.partials.script')
