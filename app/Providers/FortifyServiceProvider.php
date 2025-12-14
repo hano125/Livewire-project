@@ -11,8 +11,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Hash;
 use Laravel\Fortify\Actions\RedirectIfTwoFactorAuthenticatable;
 use Laravel\Fortify\Fortify;
+use App\Models\User;
 
 class FortifyServiceProvider extends ServiceProvider
 {
@@ -36,7 +38,7 @@ class FortifyServiceProvider extends ServiceProvider
         Fortify::redirectUserForTwoFactorAuthenticationUsing(RedirectIfTwoFactorAuthenticatable::class);
 
         RateLimiter::for('login', function (Request $request) {
-            $throttleKey = Str::transliterate(Str::lower($request->input(Fortify::username())).'|'.$request->ip());
+            $throttleKey = Str::transliterate(Str::lower($request->input(Fortify::username())) . '|' . $request->ip());
 
             return Limit::perMinute(5)->by($throttleKey);
         });
@@ -44,5 +46,25 @@ class FortifyServiceProvider extends ServiceProvider
         RateLimiter::for('two-factor', function (Request $request) {
             return Limit::perMinute(5)->by($request->session()->get('login.id'));
         });
+
+
+        Fortify::loginView(function () {
+            return view('backend.Auth.login');
+        });
+
+        // Configure Fortify to use admin guard
+        config(['fortify.guard' => 'admin']);
+
+        // Custom authentication logic for admin guard
+        Fortify::authenticateUsing(function (Request $request) {
+            $admin = User::where('email', $request->email)->first();
+
+            if ($admin && Hash::check($request->password, $admin->password)) {
+                return $admin;
+            }
+        });
+
+        // Custom redirect after successful login
+        Fortify::redirects('login', 'backend.dashboard'); // Change '/dashboard' to your desired route
     }
 }

@@ -3,17 +3,18 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Admin extends Model
+class Admin extends Authenticatable
 {
     //
 
-      /**
+    /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = '';
+    protected $table = 'admins';
 
     /**
      * The primary key associated with the table.
@@ -48,13 +49,13 @@ class Admin extends Model
      *
      * @var array
      */
-    protected $guarded = ['id'];
+    protected $guarded = [];
 
     /**
-    * The attributes that should be cast.
-    *
-    * @var array
-    */
+     * The attributes that should be cast.
+     *
+     * @var array
+     */
     protected $casts = [
         // 'status' => Status::class,
     ];
