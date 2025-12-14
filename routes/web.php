@@ -23,3 +23,11 @@ Route::prefix('/')->name("front.")->group(function () {
     //=============================== TESTIMONIAL Pages ===================//
     Route::view('/testimonial', 'frontend.testimonial')->name('testimonial');
 });
+
+
+//===================================backend Routes===================//
+
+Route::prefix('admin')->name('admin.')->group(function () {
+    //=============================== DASHBOARD Pages ===================//
+    Route::view('/dashboard', 'backend.dashboard')->name('dashboard');
+});
