@@ -6,7 +6,7 @@
     <!-- Feature Start -->
     <div class="container-xxl py-5">
         <div class="container py-5 px-lg-5">
-            <div class="row g-4">
+            <div class="row g-4 justify-content-center">
                 <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="feature-item bg-light rounded text-center p-4">
                         <i class="fa fa-3x fa-mail-bulk text-primary mb-4"></i>

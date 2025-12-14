@@ -1,4 +1,7 @@
 @extends('frontend.master')
+@section('header-content')
+    @include('frontend.partials.sub-header', ['page_name' => 'Our Projects'])
+@endsection
 @section('content')
     <!-- Testimonial Start -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">

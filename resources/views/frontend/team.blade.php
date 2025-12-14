@@ -1,4 +1,7 @@
 @extends('frontend.master')
+@section('header-content')
+    @include('frontend.partials.sub-header', ['page_name' => 'Our Projects'])
+@endsection
 @section('content')
     <!-- Team Start -->
     <div class="container-xxl py-5">
@@ -11,7 +14,8 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item bg-light rounded">
                         <div class="text-center border-bottom p-4">
-                            <img class="img-fluid rounded-circle mb-4" src="{{ asset("Front_assets") }}/img/team-1.jpg" alt="">
+                            <img class="img-fluid rounded-circle mb-4" src="{{ asset('Front_assets') }}/img/team-1.jpg"
+                                alt="">
                             <h5>John Doe</h5>
                             <span>CEO & Founder</span>
                         </div>
@@ -26,7 +30,8 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item bg-light rounded">
                         <div class="text-center border-bottom p-4">
-                            <img class="img-fluid rounded-circle mb-4" src="{{ asset("Front_assets") }}/img/team-2.jpg" alt="">
+                            <img class="img-fluid rounded-circle mb-4" src="{{ asset('Front_assets') }}/img/team-2.jpg"
+                                alt="">
                             <h5>Jessica Brown</h5>
                             <span>Web Designer</span>
                         </div>
@@ -41,7 +46,8 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item bg-light rounded">
                         <div class="text-center border-bottom p-4">
-                            <img class="img-fluid rounded-circle mb-4" src="{{ asset("Front_assets") }}/img/team-3.jpg" alt="">
+                            <img class="img-fluid rounded-circle mb-4" src="{{ asset('Front_assets') }}/img/team-3.jpg"
+                                alt="">
                             <h5>Tony Johnson</h5>
                             <span>SEO Expert</span>
                         </div>
@@ -56,7 +62,8 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item bg-light rounded">
                         <div class="text-center border-bottom p-4">
-                            <img class="img-fluid rounded-circle mb-4" src="{{ asset("Front_assets") }}/img/team-2.jpg" alt="">
+                            <img class="img-fluid rounded-circle mb-4" src="{{ asset('Front_assets') }}/img/team-2.jpg"
+                                alt="">
                             <h5>John Doe</h5>
                             <span>CEO & Founder</span>
                         </div>
@@ -71,7 +78,8 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item bg-light rounded">
                         <div class="text-center border-bottom p-4">
-                            <img class="img-fluid rounded-circle mb-4" src="{{ asset("Front_assets") }}/img/team-3.jpg" alt="">
+                            <img class="img-fluid rounded-circle mb-4" src="{{ asset('Front_assets') }}/img/team-3.jpg"
+                                alt="">
                             <h5>Jessica Brown</h5>
                             <span>Web Designer</span>
                         </div>
@@ -86,7 +94,8 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item bg-light rounded">
                         <div class="text-center border-bottom p-4">
-                            <img class="img-fluid rounded-circle mb-4" src="{{ asset("Front_assets") }}/img/team-1.jpg" alt="">
+                            <img class="img-fluid rounded-circle mb-4" src="{{ asset('Front_assets') }}/img/team-1.jpg"
+                                alt="">
                             <h5>Tony Johnson</h5>
                             <span>SEO Expert</span>
                         </div>

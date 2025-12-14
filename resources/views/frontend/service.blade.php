@@ -1,4 +1,7 @@
 @extends('frontend.master')
+@section('header-content')
+    @include('frontend.partials.sub-header', ['page_name' => 'Our Projects'])
+@endsection
 @section('content')
     <!-- Service Start -->
     <div class="container-xxl py-5">
@@ -113,8 +116,8 @@
                         sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit sed stet lorem sit clita duo
                         justo.</p>
                     <div class="d-flex align-items-center">
-                        <img class="img-fluid flex-shrink-0 rounded-circle" src="{{ asset("Front_assets") }}/img/testimonial-1.jpg"
-                            style="width: 65px; height: 65px;">
+                        <img class="img-fluid flex-shrink-0 rounded-circle"
+                            src="{{ asset('Front_assets') }}/img/testimonial-1.jpg" style="width: 65px; height: 65px;">
                         <div class="ps-4">
                             <h5 class="mb-1">Client Name</h5>
                             <span>Profession</span>
@@ -126,8 +129,8 @@
                         sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit sed stet lorem sit clita duo
                         justo.</p>
                     <div class="d-flex align-items-center">
-                        <img class="img-fluid flex-shrink-0 rounded-circle" src="{{ asset("Front_assets") }}/img/testimonial-2.jpg"
-                            style="width: 65px; height: 65px;">
+                        <img class="img-fluid flex-shrink-0 rounded-circle"
+                            src="{{ asset('Front_assets') }}/img/testimonial-2.jpg" style="width: 65px; height: 65px;">
                         <div class="ps-4">
                             <h5 class="mb-1">Client Name</h5>
                             <span>Profession</span>
@@ -139,8 +142,8 @@
                         sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit sed stet lorem sit clita duo
                         justo.</p>
                     <div class="d-flex align-items-center">
-                        <img class="img-fluid flex-shrink-0 rounded-circle" src="{{ asset("Front_assets") }}/img/testimonial-3.jpg"
-                            style="width: 65px; height: 65px;">
+                        <img class="img-fluid flex-shrink-0 rounded-circle"
+                            src="{{ asset('Front_assets') }}/img/testimonial-3.jpg" style="width: 65px; height: 65px;">
                         <div class="ps-4">
                             <h5 class="mb-1">Client Name</h5>
                             <span>Profession</span>
