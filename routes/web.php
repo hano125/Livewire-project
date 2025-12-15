@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 //-------------------Frontend Routes-------------------//
-Route::prefix('/')->name("front.")->group(function () {
+Route::prefix('front')->name("front.")->group(function () {
     //=============================== INDEX Pages ===================//
     Route::view('/', 'frontend.index')->name('index');
     //=============================== ABOUT Pages ===================//
