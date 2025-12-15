@@ -114,7 +114,7 @@ return [
     |
     */
 
-    'legacy_model_binding' => false,
+    'legacy_model_binding' => true,
 
     /*
     |---------------------------------------------------------------------------
