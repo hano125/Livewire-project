@@ -59,10 +59,19 @@
 
         <ul class="menu-inner py-1">
             <!-- Dashboard -->
-            <li class="menu-item active">
+            <li class="menu-item @yield('index-active')">
                 <a href="index.html" class="menu-link">
                     <i class="menu-icon tf-icons bx bx-home-circle"></i>
                     <div data-i18n="Analytics">Dashboard</div>
+                </a>
+            </li>
+
+
+
+            <li class="menu-item @yield('Settings-active')">
+                <a href="{{ route('admin.settings') }}" class="menu-link">
+                    <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                    <div data-i18n="Analytics">Settings</div>
                 </a>
             </li>
 
