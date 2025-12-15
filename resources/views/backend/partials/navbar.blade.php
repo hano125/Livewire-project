@@ -47,8 +47,8 @@
                                             </div>
                                         </div>
                                         <div class="flex-grow-1">
-                                            <span class="fw-semibold d-block">John Doe</span>
-                                            <small class="text-muted">Admin</small>
+                                            <span class="fw-semibold d-block">{{ Auth::guard('admin')->name }}</span>
+                                            <small class="text-muted">tets</small>
                                         </div>
                                     </div>
                                 </a>
