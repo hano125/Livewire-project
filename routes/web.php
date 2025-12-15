@@ -40,7 +40,6 @@ Route::prefix('front')->name("front.")->group(function () {
 Route::prefix('admin')->name('admin.')->group(function () {
     //=============================== DASHBOARD Pages ===================//
     Route::view('/dashboard', 'backend.dashboard')->middleware('auth')->name('dashboard');
-    Route::view('/login', 'backend.auth.login')->name('login');
 });
 // });
 
