@@ -6,6 +6,7 @@ use App\Actions\Fortify\CreateNewUser;
 use App\Actions\Fortify\ResetUserPassword;
 use App\Actions\Fortify\UpdateUserPassword;
 use App\Actions\Fortify\UpdateUserProfileInformation;
+use App\Models\Admin;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
@@ -57,7 +58,7 @@ class FortifyServiceProvider extends ServiceProvider
 
         // Custom authentication logic for admin guard
         Fortify::authenticateUsing(function (Request $request) {
-            $admin = User::where('email', $request->email)->first();
+            $admin = Admin::where('email', $request->email)->first();
 
             if ($admin && Hash::check($request->password, $admin->password)) {
                 return $admin;
