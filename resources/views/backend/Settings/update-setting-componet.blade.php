@@ -1,8 +1,11 @@
   <form action="#" method="POST" wire:submit.prevent="submit">
       @csrf
       @if ($successMessage)
-          <div class="alert alert-success m-3" x-data="{ show: true }" x-show="show" x-init="setTimeout(() => { show = false;
-              $wire.clearMessage(); }, 2000)" x-transition>
+          <div class="alert m-3" style="background-color: #9b59b6; color: white; border-color: #b281c7;"
+              x-data="{ show: true }" x-show="show" x-init="setTimeout(() => {
+                  show = false;
+                  $wire.clearMessage();
+              }, 2000)" x-transition>
               {{ $successMessage }}
           </div>
       @endif
@@ -117,6 +120,11 @@
       <div class="mt-3">
           <button type="submit" class="btn btn-primary me-2">
               <i class="bx bx-save me-1"></i> Save Settings
+              <div class="text-center" wire:loading wire:target="submit">
+                  <div class="spinner-border spinner-border-sm text-danger" role="status">
+                      <span class="visually-hidden">Loading...</span>
+                  </div>
+              </div>
           </button>
           <button type="reset" class="btn btn-outline-secondary">
               <i class="bx bx-reset me-1"></i> Reset
