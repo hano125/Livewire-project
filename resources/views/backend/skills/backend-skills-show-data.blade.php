@@ -62,7 +62,6 @@
                             @endforeach
                         </tbody>
                     </table>
-
                     <!-- Pagination -->
                     <div class="mt-3">
                         {{ $skills->links('livewire::bootstrap') }}
