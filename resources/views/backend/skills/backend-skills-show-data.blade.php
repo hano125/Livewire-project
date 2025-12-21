@@ -19,174 +19,59 @@
 
             <!-- Skills Table -->
             <div class="table-responsive">
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>Skill Name</th>
-                            <th>Progress</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <i class="bx bxl-php text-primary me-2 fs-4"></i>
-                                    <span class="fw-medium">PHP</span>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <div class="progress flex-grow-1 me-3" style="height: 8px; width: 200px;">
-                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 90%"
-                                            aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <small class="text-muted">90%</small>
-                                </div>
-                            </td>
-                            <td>
-                                <button class="btn btn-sm btn-icon btn-warning" title="Edit">
-                                    <i class="bx bx-edit"></i>
-                                </button>
-                                <button class="btn btn-sm btn-icon btn-danger" title="Delete">
-                                    <i class="bx bx-trash"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <i class="bx bxl-laravel text-danger me-2 fs-4"></i>
-                                    <span class="fw-medium">Laravel</span>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <div class="progress flex-grow-1 me-3" style="height: 8px; width: 200px;">
-                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 85%"
-                                            aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <small class="text-muted">85%</small>
-                                </div>
-                            </td>
-                            <td>
-                                <button class="btn btn-sm btn-icon btn-warning" title="Edit">
-                                    <i class="bx bx-edit"></i>
-                                </button>
-                                <button class="btn btn-sm btn-icon btn-danger" title="Delete">
-                                    <i class="bx bx-trash"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <i class="bx bxl-javascript text-warning me-2 fs-4"></i>
-                                    <span class="fw-medium">JavaScript</span>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <div class="progress flex-grow-1 me-3" style="height: 8px; width: 200px;">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 80%"
-                                            aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <small class="text-muted">80%</small>
-                                </div>
-                            </td>
-                            <td>
-                                <button class="btn btn-sm btn-icon btn-warning" title="Edit">
-                                    <i class="bx bx-edit"></i>
-                                </button>
-                                <button class="btn btn-sm btn-icon btn-danger" title="Delete">
-                                    <i class="bx bx-trash"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <i class="bx bxl-vuejs text-success me-2 fs-4"></i>
-                                    <span class="fw-medium">Vue.js</span>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <div class="progress flex-grow-1 me-3" style="height: 8px; width: 200px;">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: 75%"
-                                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <small class="text-muted">75%</small>
-                                </div>
-                            </td>
-                            <td>
-                                <button class="btn btn-sm btn-icon btn-warning" title="Edit">
-                                    <i class="bx bx-edit"></i>
-                                </button>
-                                <button class="btn btn-sm btn-icon btn-danger" title="Delete">
-                                    <i class="bx bx-trash"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <i class="bx bxl-css3 text-info me-2 fs-4"></i>
-                                    <span class="fw-medium">CSS3</span>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <div class="progress flex-grow-1 me-3" style="height: 8px; width: 200px;">
-                                        <div class="progress-bar bg-info" role="progressbar" style="width: 95%"
-                                            aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <small class="text-muted">95%</small>
-                                </div>
-                            </td>
-                            <td>
-                                <button class="btn btn-sm btn-icon btn-warning" title="Edit">
-                                    <i class="bx bx-edit"></i>
-                                </button>
-                                <button class="btn btn-sm btn-icon btn-danger" title="Delete">
-                                    <i class="bx bx-trash"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <i class="bx bxl-react text-primary me-2 fs-4"></i>
-                                    <span class="fw-medium">React</span>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <div class="progress flex-grow-1 me-3" style="height: 8px; width: 200px;">
-                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 70%"
-                                            aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <small class="text-muted">70%</small>
-                                </div>
-                            </td>
-                            <td>
-                                <button class="btn btn-sm btn-icon btn-warning" title="Edit">
-                                    <i class="bx bx-edit"></i>
-                                </button>
-                                <button class="btn btn-sm btn-icon btn-danger" title="Delete">
-                                    <i class="bx bx-trash"></i>
-                                </button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                @if ($skills->count() > 0)
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Skill Name</th>
+                                <th>Progress</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($skills as $index => $skill)
+                                <tr>
+                                    <td>{{ $skill->id }}</td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <i class="bx bxl text-primary me-2 fs-4"></i>
+                                            <span class="fw-medium">{{ $skill->name }}</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <div class="progress flex-grow-1 me-3" style="height: 8px; width: 200px;">
+                                                <div class="progress-bar bg-primary" role="progressbar"
+                                                    style="width: {{ $skill->prograss }}%"
+                                                    aria-valuenow="{{ $skill->prograss }}" aria-valuemin="0"
+                                                    aria-valuemax="100"></div>
+                                            </div>
+                                            <small class="text-muted">{{ $skill->prograss }}%</small>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-sm btn-icon btn-warning" title="Edit">
+                                            <i class="bx bx-edit"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-icon btn-danger" title="Delete">
+                                            <i class="bx bx-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+
+                    <!-- Pagination -->
+                    <div class="mt-3">
+                        {{ $skills->links('livewire::bootstrap') }}
+                    </div>
+                @else
+                    <div class="text-center py-4">
+                        <p class="text-muted">No skills found.</p>
+                    </div>
+                @endif
             </div>
         </div>
     </div>
@@ -204,8 +89,7 @@
                     <form>
                         <div class="mb-3">
                             <label for="skillName" class="form-label">Skill Name</label>
-                            <input type="text" class="form-control" id="skillName"
-                                placeholder="Enter skill name">
+                            <input type="text" class="form-control" id="skillName" placeholder="Enter skill name">
                         </div>
                         <div class="mb-3">
                             <label for="skillProgress" class="form-label">Progress (%)</label>
