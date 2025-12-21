@@ -9,8 +9,15 @@ use Livewire\WithPagination;
 class BackendSkillsShowData extends Component
 {
     use WithPagination;
+    public $searchTerm = '';
+
+    public function search()
+    {
+        $this->resetPage();
+    }
+
     public function render()
     {
-        return view('backend.skills.backend-skills-show-data', ['skills' => Skill::paginate(10)]);
+        return view('backend.skills.backend-skills-show-data', ['skills' => Skill::where("name", "like", "%{$this->searchTerm}%")->paginate(10)]);
     }
 }

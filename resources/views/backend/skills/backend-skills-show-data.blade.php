@@ -13,7 +13,8 @@
             <div class="mb-4">
                 <div class="input-group input-group-merge">
                     <span class="input-group-text"><i class="bx bx-search"></i></span>
-                    <input type="text" class="form-control" placeholder="Search skills..." id="searchSkill">
+                    <input type="text" class="form-control" placeholder="Search skills..." id="searchSkill"
+                        wire:model="searchTerm" wire:keyup="search">
                 </div>
             </div>
 
