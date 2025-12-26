@@ -3,6 +3,7 @@
 namespace App\Livewire\Backend\Skills;
 
 use App\Models\Skill;
+use Livewire\Attributes\On;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -10,6 +11,10 @@ class BackendSkillsShowData extends Component
 {
     use WithPagination;
     public $searchTerm = '';
+
+    protected $listeners = [
+        'skillCreated' => '$refresh',
+    ];
 
     public function search()
     {

@@ -12,5 +12,6 @@
             @livewire('backend.skills.backend-skills-show-data')
 
         </div>
+        @livewire('backend.skills.update-skill-data')
         <!-- Content wrapper -->
     @endsection

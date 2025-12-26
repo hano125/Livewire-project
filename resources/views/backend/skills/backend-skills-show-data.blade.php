@@ -8,6 +8,7 @@
             </button>
         </div>
 
+
         <div class="card-body">
             <!-- Search Input -->
             <div class="mb-4">
@@ -52,9 +53,10 @@
                                         </div>
                                     </td>
                                     <td>
-                                        <button class="btn btn-sm btn-icon btn-warning" title="Edit">
+                                        <a href="#" class="btn btn-sm btn-icon btn-warning" title="Edit"
+                                            wire:click.prevent="$dispatch('skillUpdate', { id: {{ $skill->id }} })">
                                             <i class="bx bx-edit"></i>
-                                        </button>
+                                        </a>
                                         <button class="btn btn-sm btn-icon btn-danger" title="Delete">
                                             <i class="bx bx-trash"></i>
                                         </button>
@@ -77,35 +79,13 @@
     </div>
     <!--/ Skills Table -->
 
-    <!-- Add Skill Modal -->
-    <div class="modal fade" id="addSkillModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Add New Skill</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="skillName" class="form-label">Skill Name</label>
-                            <input type="text" class="form-control" id="skillName" placeholder="Enter skill name">
-                        </div>
-                        <div class="mb-3">
-                            <label for="skillProgress" class="form-label">Progress (%)</label>
-                            <input type="number" class="form-control" id="skillProgress" placeholder="0-100"
-                                min="0" max="100">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary">
-                        <i class="bx bx-save me-1"></i> Save Skill
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--/ Add Skill Modal -->
+    @livewire('backend.skills.create-skills-data')
+
+    @if (session()->has('success'))
+        <script>
+            window.addEventListener('DOMContentLoaded', () => {
+                alert('{{ session('success') }}');
+            });
+        </script>
+    @endif
 </div>
