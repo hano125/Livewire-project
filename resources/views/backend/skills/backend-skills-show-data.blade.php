@@ -53,6 +53,10 @@
                                         </div>
                                     </td>
                                     <td>
+                                        <a href="#" class="btn btn-sm btn-icon btn-info" title="Show"
+                                            wire:click.prevent="$dispatch('skillShow', { id: {{ $skill->id }} })">
+                                            <i class="bx bx-show"></i>
+                                        </a>
                                         <a href="#" class="btn btn-sm btn-icon btn-warning" title="Edit"
                                             wire:click.prevent="$dispatch('skillUpdate', { id: {{ $skill->id }} })">
                                             <i class="bx bx-edit"></i>

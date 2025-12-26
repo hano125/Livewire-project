@@ -22,7 +22,7 @@
                             <i class="bx bx-trash me-1"></i> Delete
                         </button>
                     </div>
-                </form>
+                </form>P
             </div>
         </div>
     </div>

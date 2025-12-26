@@ -16,6 +16,7 @@
         @livewire('backend.skills.create-skills-data')
         @livewire('backend.skills.update-skill-data')
         @livewire('backend.skills.delete-skill')
+        @livewire('backend.skills.show-data-compomnt')
 
         <!-- Content wrapper -->
     @endsection
