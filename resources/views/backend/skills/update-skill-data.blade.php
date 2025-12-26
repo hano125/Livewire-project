@@ -2,7 +2,7 @@
     <div class="modal fade" id="editSkillModal" tabindex="-1" aria-hidden="true" wire:ignore.self>
         <div class="modal-dialog">
             <div class="modal-content">
-                <form wire:submit.prevent="saveSkill">
+                <form wire:submit.prevent="updateSkill">
                     <div class="modal-header">
                         <h5 class="modal-title">Add New Skill</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>

@@ -33,7 +33,7 @@
                         </thead>
                         <tbody>
                             @foreach ($skills as $index => $skill)
-                                <tr>
+                                <tr wire:key="skill-{{ $skill->id }}">
                                     <td>{{ $skill->id }}</td>
                                     <td>
                                         <div class="d-flex align-items-center">
@@ -57,9 +57,10 @@
                                             wire:click.prevent="$dispatch('skillUpdate', { id: {{ $skill->id }} })">
                                             <i class="bx bx-edit"></i>
                                         </a>
-                                        <button class="btn btn-sm btn-icon btn-danger" title="Delete">
+                                        <a class="btn btn-sm btn-icon btn-danger" title="Delete" href="#"
+                                            wire:click.prevent="$dispatch('skillDelete', { id: {{ $skill->id }} })">
                                             <i class="bx bx-trash"></i>
-                                        </button>
+                                        </a>
                                     </td>
                                 </tr>
                             @endforeach
@@ -78,8 +79,6 @@
         </div>
     </div>
     <!--/ Skills Table -->
-
-    @livewire('backend.skills.create-skills-data')
 
     @if (session()->has('success'))
         <script>

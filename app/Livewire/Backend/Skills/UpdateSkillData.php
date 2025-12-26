@@ -32,7 +32,7 @@ class UpdateSkillData extends Component
         $this->dispatch('editSkillModal');
     }
 
-    public function saveSkill()
+    public function updateSkill()
     {
         //validation
         $data = $this->validate();
