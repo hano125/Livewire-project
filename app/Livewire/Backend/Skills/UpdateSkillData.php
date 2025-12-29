@@ -23,14 +23,14 @@ class UpdateSkillData extends Component
             'prograss' => 'required|integer|min:0|max:100',
         ];
     }
-    
+
     public function skillUpdate($id)
     {
         $this->skill = Skill::find($id);
         $this->name = $this->skill->name;
         $this->prograss = $this->skill->prograss;
         $this->resetValidation(['name', 'prograss']);
-        $this->dispatch('editSkillModal');
+        $this->dispatch('open-modal', 'skillUpdate');
     }
 
     public function updateSkill()
@@ -42,7 +42,7 @@ class UpdateSkillData extends Component
 
         $this->reset(['name', 'prograss']);
         //hide modal
-        $this->dispatch('closeEditModal');
+        $this->dispatch('close-modal', 'skillUpdate');
         //refresh skill list
         $this->dispatch('skillCreated');
 

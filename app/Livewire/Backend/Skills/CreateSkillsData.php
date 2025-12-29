@@ -25,7 +25,7 @@ class CreateSkillsData extends Component
         Skill::create($data);
         $this->reset(['name', 'prograss']);
         //hide modal
-        $this->dispatch('closeModal');
+        $this->dispatch('close-modal', 'addSkillModal');
         //refresh skill list
         $this->dispatch('skillCreated');
 

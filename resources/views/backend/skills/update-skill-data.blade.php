@@ -1,4 +1,4 @@
-<x-edit_data_component title="Update Skill">
+<x-create_data_component id="skillUpdate" title="Add New Skill " submit="updateSkill" btnName="Update Skill">
     <div class="mb-3">
         <label for="skillName" class="form-label">Skill Name</label>
         <input type="text" class="form-control" id="skillName" placeholder="Enter skill name" wire:model="name">
@@ -10,4 +10,4 @@
             wire:model="prograss">
         @include('backend.validationError', ['property' => 'prograss'])
     </div>
-</x-edit_data_component>
+</x-create_data_component>

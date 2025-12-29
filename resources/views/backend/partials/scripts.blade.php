@@ -21,7 +21,7 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
 
 
-  <!--/ Add Skill Modal -->
+  {{-- <!--/ Add Skill Modal -->
   <script>
       document.addEventListener('livewire:init', () => {
           // Open modal
@@ -34,17 +34,23 @@
               $('#editSkillModal').modal('hide');
           });
       });
-  </script>
+  </script> --}}
 
 
-  <!--/ Add Skill Modal -->
   <script>
       document.addEventListener('livewire:init', () => {
-          Livewire.on('closeModal', () => {
-              const modal = bootstrap.Modal.getInstance(document.getElementById('addSkillModal'));
-              if (modal) {
-                  modal.hide();
-              }
+
+          Livewire.on('open-modal', (id) => {
+              const modalEl = document.getElementById(id);
+              const modal = new bootstrap.Modal(modalEl);
+              modal.show();
           });
+
+          Livewire.on('close-modal', (id) => {
+              const modalEl = document.getElementById(id);
+              const modal = bootstrap.Modal.getInstance(modalEl);
+              modal?.hide();
+          });
+
       });
   </script>
