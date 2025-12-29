@@ -17,7 +17,7 @@ class ShowDataCompomnt extends Component
         $this->skill = Skill::find($id);
         $this->name = $this->skill->name;
         $this->prograss = $this->skill->prograss;
-        $this->dispatch('showView');
+        $this->dispatch('open-modal', 'skillShow');
     }
 
 
