@@ -44,6 +44,9 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::view('/settings', 'backend.Settings.index')->middleware('auth:admin')->name('settings');
     //=============================== PROFILE Pages ===================//
     Route::view('/skills', 'backend.skills.index')->middleware('auth:admin')->name('skills');
+
+    //=============================== SUBSCRIBERS Pages ===================//
+    Route::view('/subscribers', 'backend.subscribers.index')->middleware('auth:admin')->name('subscribers');
 });
 // });
 
