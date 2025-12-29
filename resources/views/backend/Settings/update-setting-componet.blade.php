@@ -120,11 +120,7 @@
       <div class="mt-3">
           <button type="submit" class="btn btn-primary me-2">
               <i class="bx bx-save me-1"></i> Save Settings
-              <div class="text-center" wire:loading wire:target="submit">
-                  <div class="spinner-border spinner-border-sm text-danger" role="status">
-                      <span class="visually-hidden">Loading...</span>
-                  </div>
-              </div>
+              @include('backend.spiner', ['target' => 'submit'])
           </button>
           <button type="reset" class="btn btn-outline-secondary">
               <i class="bx bx-reset me-1"></i> Reset

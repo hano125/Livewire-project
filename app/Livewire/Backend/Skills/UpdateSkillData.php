@@ -23,6 +23,7 @@ class UpdateSkillData extends Component
             'prograss' => 'required|integer|min:0|max:100',
         ];
     }
+    
     public function skillUpdate($id)
     {
         $this->skill = Skill::find($id);

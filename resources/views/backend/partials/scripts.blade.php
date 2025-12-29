@@ -19,3 +19,32 @@
 
   <!-- Place this tag in your head or just before your close body tag. -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+  <!--/ Add Skill Modal -->
+  <script>
+      document.addEventListener('livewire:init', () => {
+          // Open modal
+          Livewire.on('skillUpdate', (data) => {
+              $('#editSkillModal').modal('show');
+          });
+
+          // Close modal
+          Livewire.on('closeEditModal', () => {
+              $('#editSkillModal').modal('hide');
+          });
+      });
+  </script>
+
+
+  <!--/ Add Skill Modal -->
+  <script>
+      document.addEventListener('livewire:init', () => {
+          Livewire.on('closeModal', () => {
+              const modal = bootstrap.Modal.getInstance(document.getElementById('addSkillModal'));
+              if (modal) {
+                  modal.hide();
+              }
+          });
+      });
+  </script>
