@@ -89,6 +89,13 @@
             </a>
         </li>
 
+        <!-- subscribers -->
+        <li class="menu-item @yield('counters-active')">
+            <a href="{{ route('admin.counters') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-user-plus"></i>
+                <div data-i18n="Analytics">counters</div>
+            </a>
+        </li>
     </ul>
 </aside>
 <!-- / Menu -->

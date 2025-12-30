@@ -47,6 +47,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
     //=============================== SUBSCRIBERS Pages ===================//
     Route::view('/subscribers', 'backend.subscribers.index')->middleware('auth:admin')->name('subscribers');
+    //=============================== COUNTERS Pages ===================//
+    Route::view('/counters', 'backend.counters.index')->middleware('auth:admin')->name('counters');
 });
 // });
 
