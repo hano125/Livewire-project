@@ -11,7 +11,7 @@ class SubscriberComponent extends Component
     public $searchTerm = '';
 
     protected $listeners = [
-        'skillCreated' => '$refresh',
+        'refreshSubscribers' => '$refresh',
     ];
 
     public function search()

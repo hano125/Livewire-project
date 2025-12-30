@@ -11,5 +11,6 @@
 
             @livewire('backend.subscribers.subscriber-component')
         </div>
+        @livewire('backend.subscribers.delete-component')
         <!-- Content wrapper -->
     @endsection

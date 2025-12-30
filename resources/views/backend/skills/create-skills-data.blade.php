@@ -12,6 +12,4 @@
             wire:model="prograss">
         @include('backend.validationError', ['property' => 'prograss'])
     </div>
-
-
 </x-create_data_component>

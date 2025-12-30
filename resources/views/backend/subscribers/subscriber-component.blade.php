@@ -3,9 +3,9 @@
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
             <h5 class="mb-0">Subscribers List</h5>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addSubscriberModal">
+            {{-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addSubscriberModal">
                 <i class="bx bx-plus me-1"></i> Add New Subscriber
-            </button>
+            </button> --}}
         </div>
 
         <div class="card-body">
@@ -40,14 +40,6 @@
                                         </div>
                                     </td>
                                     <td>
-                                        <a href="#" class="btn btn-sm btn-icon btn-info" title="Show"
-                                            wire:click.prevent="$dispatch('subscriberShow', { id: {{ $subscriber->id }} })">
-                                            <i class="bx bx-show"></i>
-                                        </a>
-                                        <a href="#" class="btn btn-sm btn-icon btn-warning" title="Edit"
-                                            wire:click.prevent="$dispatch('subscriberUpdate', { id: {{ $subscriber->id }} })">
-                                            <i class="bx bx-edit"></i>
-                                        </a>
                                         <a class="btn btn-sm btn-icon btn-danger" title="Delete" href="#"
                                             wire:click.prevent="$dispatch('subscriberDelete', { id: {{ $subscriber->id }} })">
                                             <i class="bx bx-trash"></i>
