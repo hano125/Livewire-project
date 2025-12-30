@@ -51,7 +51,6 @@
               const modal = bootstrap.Modal.getInstance(modalEl);
               modal?.hide();
           });
-
       });
   </script>
 
