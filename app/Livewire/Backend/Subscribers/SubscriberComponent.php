@@ -21,7 +21,7 @@ class SubscriberComponent extends Component
     public function render()
     {
         return view('backend.subscribers.subscriber-component', [
-            'subscribers' => \App\Models\Subscriber::where('email', 'like', '%' . $this->searchTerm . '%')->paginate(1),
+            'subscribers' => \App\Models\Subscriber::where('email', 'like', '%' . $this->searchTerm . '%')->paginate(10),
         ]);
     }
 }
