@@ -15,7 +15,7 @@
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
 
                     @if (!empty($submit) && !empty($btnName))
-                        <button type="button" class="btn btn-primary"
+                        <button type="button" class="btn btn-{{ $color }}"
                             wire:click="{{ $submit }}">{{ $btnName }}</button>
                     @endif
                 </div>

@@ -1,4 +1,4 @@
-<x-create_data_component id="skillUpdate" title="Add New Skill " submit="updateSkill" btnName="Update Skill">
+<x-create_data_component id="skillUpdate" title="Add New Skill " submit="updateSkill" btnName="Update Skill" color="primary" >
     <div class="mb-3">
         <label for="skillName" class="form-label">Skill Name</label>
         <input type="text" class="form-control" id="skillName" placeholder="Enter skill name" wire:model="name">

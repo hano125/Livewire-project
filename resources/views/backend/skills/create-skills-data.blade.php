@@ -1,4 +1,6 @@
-<x-create_data_component id="addSkillModal" title="Add New Skill " submit="saveSkill" btnName="Save Skill">
+<x-create_data_component id="addSkillModal" title="Add New Skill " submit="saveSkill" btnName="Save Skill" color="primary" >
+
+
     <div class="mb-3">
         <label for="skillName" class="form-label">Skill Name</label>
         <input type="text" class="form-control" id="skillName" placeholder="Enter skill name" wire:model="name">
@@ -10,4 +12,6 @@
             wire:model="prograss">
         @include('backend.validationError', ['property' => 'prograss'])
     </div>
+
+
 </x-create_data_component>

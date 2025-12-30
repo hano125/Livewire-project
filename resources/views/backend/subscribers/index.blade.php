@@ -11,7 +11,5 @@
 
             @livewire('backend.subscribers.subscriber-component')
         </div>
-
-
         <!-- Content wrapper -->
     @endsection

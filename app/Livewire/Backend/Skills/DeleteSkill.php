@@ -17,7 +17,7 @@ class DeleteSkill extends Component
     public function skillDelete($id)
     {
         $this->skill_id = Skill::find($id);
-        $this->dispatch('deleteSkillModal');
+        $this->dispatch('open-modal', 'deleteSkillModal');
     }
 
     public function deleteSkill()
@@ -33,7 +33,7 @@ class DeleteSkill extends Component
 
 
         //hide modal
-        $this->dispatch('closeDelete');
+        $this->dispatch('close-modal', 'deleteSkillModal');
 
         //refresh skill list
         $this->dispatch('skillCreated')->to(BackendSkillsShowData::class);
