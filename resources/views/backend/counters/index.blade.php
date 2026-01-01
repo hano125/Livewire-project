@@ -9,7 +9,13 @@
                 <span class="text-muted fw-light">Counters /</span> Manage Counters
             </h4>
 
-            @livewire('backend.counters.create-component')
+            @livewire('backend.counters.view-counter-component')
+
         </div>
+        @livewire('backend.counters.create-component')
+
+        @livewire('backend.counters.update-counter-component')
+        @livewire('backend.counters.delete-counter-component')
+
         <!-- Content wrapper -->
     @endsection

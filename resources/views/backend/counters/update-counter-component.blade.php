@@ -1,4 +1,5 @@
-<x-create_data_component id="addCounterModal" title="Add New Counter " submit="save" btnName="Save" color="primary">
+<x-create_data_component id="updateCounterModal" title="Update Counter" submit="updateCounter" btnName="Update"
+    color="primary">
 
     <div class="mb-3">
         <label for="counterName" class="form-label">Counter Name</label>
@@ -13,15 +14,9 @@
     </div>
 
     <div class="mb-3">
-        <label class="form-label">Icon</label>
-        <input type="file" class="form-control" wire:model="icon" accept="image/*">
-        <div wire:loading wire:target="icon" class="text-info small mt-1">
-            Uploading icon, please wait...
-        </div>
-        @error('icon')
-            <span class="text-danger small">{{ $message }}</span>
-        @enderror
+        <label for="counterIcon" class="form-label">Icon</label>
+        <input type="file" class="form-control" id="counterIcon" placeholder="Enter icon class" wire:model="icon">
+        @include('backend.validationError', ['property' => 'icon'])
     </div>
-
 
 </x-create_data_component>
