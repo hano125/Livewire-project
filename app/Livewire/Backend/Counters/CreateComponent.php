@@ -10,6 +10,7 @@ class CreateComponent extends Component
 {
     use WithFileUploads;
     public $name, $count, $icon;
+    
     public function rules()
     {
         return [
