@@ -13,9 +13,8 @@
 
         </div>
         @livewire('backend.counters.create-component')
-
+        @livewire('backend.counters.show-record-by-id-componenet')
         @livewire('backend.counters.update-counter-component')
         @livewire('backend.counters.delete-counter-component')
-
         <!-- Content wrapper -->
     @endsection
