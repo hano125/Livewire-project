@@ -1,4 +1,4 @@
-<x-create_data_component id="serviceUpdate" title="Edit New Service " submit="update" btnName="Update Service"
+<x-create_data_component id="updateServicesModal" title="Edit New Service " submit="update" btnName="Update Service"
     color="primary">
 
     <div class="mb-3">

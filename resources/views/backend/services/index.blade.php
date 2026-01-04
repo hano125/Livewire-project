@@ -15,6 +15,8 @@
         @livewire('backend.services.create-service-component')
         @livewire('backend.services.update-service-component')
         @livewire('backend.services.view-service-component')
+        @livewire('backend.services.delete-services-component')
+
 
         <!-- Content wrapper -->
     @endsection
