@@ -51,6 +51,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::view('/counters', 'backend.counters.index')->middleware('auth:admin')->name('counters');
     //=============================== Services Pages ===================//
     Route::view("/services", "backend.services.index")->middleware('auth:admin')->name('services');
+    //=============================== Services Pages ===================//
+    Route::view("/messages", "backend.messages.index")->middleware('auth:admin')->name('messages');
 });
 // });
 
