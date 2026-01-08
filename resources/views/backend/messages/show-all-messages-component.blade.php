@@ -14,68 +14,86 @@
             <div class="mb-4">
                 <div class="input-group input-group-merge">
                     <span class="input-group-text"><i class="bx bx-search"></i></span>
-                    <input type="text" class="form-control" placeholder="Search messages..." id="searchMessage"
-                        wire:model="searchTerm" wire:keyup="search">
+                    <input id="searchMessage" type="text" class="form-control" placeholder="Search messages..."
+                        wire:model.debounce.500ms="searchTerm">
                 </div>
             </div>
 
             <!-- Messages Table -->
             <div class="table-responsive">
-                @if ($counters->count() > 0)
-                    <table class="table table-hover">
-                        <thead>
+                @if ($messages->count() > 0)
+                    <table class="table table-hover align-middle mb-0">
+                        <thead class="table-light">
                             <tr>
-                                <th>No</th>
-                                <th>Counter Name</th>
-                                <th>Count</th>
-                                <th>Icon</th>
-                                <th>Actions</th>
+                                <th style="width: 70px;">No</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Subject</th>
+                                <th>Message</th>
+                                <th style="width: 130px;">Status</th>
+                                <th style="width: 140px;" class="text-center">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($counters as $index => $counter)
-                                <tr wire:key="counter-{{ $counter->id }}">
-                                    <td>{{ $counter->id }}</td>
+                            @foreach ($messages as $index => $message)
+                                <tr wire:key="counter-{{ $message->id }}">
+                                    <td>{{ $messages->firstItem() + $index }}</td>
                                     <td>
                                         <div class="d-flex align-items-center">
                                             <i class="bx bxl text-primary me-2 fs-4"></i>
-                                            <span class="fw-medium">{{ $counter->name }}</span>
+                                            <span class="fw-medium">{{ $message->name }}</span>
                                         </div>
                                     </td>
                                     <td>
                                         <div class="d-flex align-items-center">
-                                            <div class="progress flex-grow-1 me-3" style="height: 8px; width: 200px;">
-                                                <div class="progress-bar bg-primary" role="progressbar"
-                                                    style="width: {{ $counter->count }}%"
-                                                    aria-valuenow="{{ $counter->count }}" aria-valuemin="0"
-                                                    aria-valuemax="100"></div>
-                                            </div>
-                                            <small class="text-muted">{{ $counter->count }}%</small>
+                                            <i class="bx bxl text-primary me-2 fs-4"></i>
+                                            <span class="fw-medium">{{ $message->email }}</span>
                                         </div>
                                     </td>
                                     <td>
-                                        @if ($counter->icon)
-                                            <img src="{{ Storage::url($counter->icon) }}"
-                                                alt="{{ $counter->name }} icon" class="rounded"
-                                                style="width: 32px; height: 32px; object-fit: cover;"
-                                                onerror="this.style.display='none'">
-                                        @else
-                                            <span class="text-muted">No icon</span>
-                                        @endif
+                                        <div class="d-flex align-items-center">
+                                            <i class="bx bxl text-primary me-2 fs-4"></i>
+                                            <span class="fw-medium text-truncate d-inline-block"
+                                                style="max-width: 220px;" title="{{ $message->subject }}">
+                                                {{ \Illuminate\Support\Str::limit($message->subject, 60) }}
+                                            </span>
+                                        </div>
                                     </td>
                                     <td>
-                                        <a href="#" class="btn btn-sm btn-icon btn-info" title="Show"
-                                            wire:click.prevent="$dispatch('counterShow', { id: {{ $counter->id }} })">
-                                            <i class="bx bx-show"></i>
-                                        </a>
-                                        <a href="#" class="btn btn-sm btn-icon btn-warning" title="Edit"
-                                            wire:click.prevent="$dispatch('counterUpdateComponent', { id: {{ $counter->id }} })">
-                                            <i class="bx bx-edit"></i>
-                                        </a>
-                                        <a class="btn btn-sm btn-icon btn-danger" title="Delete" href="#"
-                                            wire:click.prevent="$dispatch('counterDelete', { id: {{ $counter->id }} })">
-                                            <i class="bx bx-trash"></i>
-                                        </a>
+                                        <span class="text-truncate d-inline-block" style="max-width: 260px;"
+                                            title="{{ $message->message }}">
+                                            {{ \Illuminate\Support\Str::limit($message->message, 80) }}
+                                        </span>
+                                    </td>
+                                    <td>
+                                        @php
+                                            $status = strtolower($message->status);
+                                            $badgeClass =
+                                                $status === 'completed'
+                                                    ? 'bg-success'
+                                                    : ($status === 'rejected'
+                                                        ? 'bg-danger'
+                                                        : 'bg-warning'); // pending
+                                        @endphp
+                                        <span class="badge rounded-pill {{ $badgeClass }} text-uppercase">
+                                            {{ $status }}
+                                        </span>
+                                    </td>
+                                    <td class="text-center">
+                                        <div class="btn-group" role="group" aria-label="Message actions">
+                                            <a href="#" class="btn btn-sm btn-icon btn-info" title="Show"
+                                                wire:click.prevent="$dispatch('counterShow', { id: {{ $message->id }} })">
+                                                <i class="bx bx-show"></i>
+                                            </a>
+                                            <a href="#" class="btn btn-sm btn-icon btn-warning" title="Edit"
+                                                wire:click.prevent="$dispatch('counterUpdateComponent', { id: {{ $message->id }} })">
+                                                <i class="bx bx-edit"></i>
+                                            </a>
+                                            <a class="btn btn-sm btn-icon btn-danger" title="Delete" href="#"
+                                                wire:click.prevent="$dispatch('counterDelete', { id: {{ $message->id }} })">
+                                                <i class="bx bx-trash"></i>
+                                            </a>
+                                        </div>
                                     </td>
                                 </tr>
                             @endforeach
@@ -83,7 +101,7 @@
                     </table>
                     <!-- Pagination -->
                     <div class="mt-3">
-                        {{ $counters->links() }}
+                        {{ $messages->links() }}
                     </div>
                 @else
                     <div class="text-center py-4">

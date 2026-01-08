@@ -99,7 +99,7 @@
         <!-- counters -->
         <li class="menu-item @yield('services-active')">
             <a href="{{ route('admin.services') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-bar-chart"></i>
+                <i class="menu-icon tf-icons bx bx-briefcase"></i>
                 <div data-i18n="Analytics">Services</div>
             </a>
         </li>
@@ -107,8 +107,8 @@
         <!-- counters -->
         <li class="menu-item @yield('messages-active')">
             <a href="{{ route('admin.messages') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-bar-chart"></i>
-                <div data-i18n="Analytics">messages</div>
+                <i class="menu-icon tf-icons bx bx-message-dots"></i>
+                <div data-i18n="Analytics">Messages</div>
             </a>
         </li>
     </ul>

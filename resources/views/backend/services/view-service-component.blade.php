@@ -23,6 +23,4 @@
             <span class="text-danger small">{{ $message }}</span>
         @enderror
     </div>
-
-
 </x-create_data_component>

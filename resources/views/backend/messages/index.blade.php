@@ -1,5 +1,5 @@
 @extends('backend.master')
-@section('counters-active', 'active')
+@section('messages-active', 'active')
 @section('content')
     <!-- Content wrapper -->
     <div class="content-wrapper">

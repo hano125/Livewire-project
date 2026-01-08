@@ -8,12 +8,12 @@ class Messages extends Model
 {
     //
 
-      /**
+    /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = '';
+    protected $table = 'messages';
 
     /**
      * The primary key associated with the table.
@@ -51,10 +51,10 @@ class Messages extends Model
     protected $guarded = ['id'];
 
     /**
-    * The attributes that should be cast.
-    *
-    * @var array
-    */
+     * The attributes that should be cast.
+     *
+     * @var array
+     */
     protected $casts = [
         // 'status' => Status::class,
     ];
