@@ -16,12 +16,21 @@ class ShowAllMessagesComponent extends Component
 
     public function render()
     {
-        $messages = Messages::where("name", 'like', '%' . $this->searchTerm . '%')
-            ->orWhere("email", 'like', '%' . $this->searchTerm . '%')
-            ->orWhere("subject", 'like', '%' . $this->searchTerm . '%')
-            ->orWhere("message", 'like', '%' . $this->searchTerm . '%')
-            ->latest()
-            ->paginate(10);
+        $query = Messages::query()
+            ->select(['id', 'name', 'email', 'subject', 'status'])
+            ->when($this->searchTerm !== '', function ($q) {
+                $term = $this->searchTerm;
+                $q->where(function ($q) use ($term) {
+                    $q->where('name', 'like', "%{$term}%")
+                        ->orWhere('email', 'like', "%{$term}%")
+                        ->orWhere('subject', 'like', "%{$term}%")
+                        ->orWhere('message', 'like', "%{$term}%");
+                });
+            })
+            ->orderByDesc('id'); // uses PK index
+
+        $messages = $query->Paginate(10);
+
         return view('backend.messages.show-all-messages-component', get_defined_vars());
     }
 }
